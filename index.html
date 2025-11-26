@@ -571,6 +571,40 @@
         align-items: flex-start;
       }
     }
+    /* Stats Section Boxes */
+.stats-container {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 20px;
+}
+
+.stat-box {
+  background: linear-gradient(135deg, #6a5acd, #836fff);
+  padding: 18px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.stat-box:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.25);
+  background: linear-gradient(135deg, #7b68ee, #9370db);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
   </style>
 </head>
 <body>
@@ -658,33 +692,57 @@
 
       <!-- ABOUT -->
       <section id="about" class="reveal">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-sub">
-          A quick snapshot of who I am, what I’ve worked on, and what I’m aiming for.
-        </p>
-        <div class="about-grid">
-          <div>
-            <p>
-              I am a Computer Science and Engineering student from RGM Engineering College (JNTUA)
-              with a strong interest in software development, problem solving, and cloud technologies.
-              I like learning by doing – from building Android and web applications to exploring data
-              science and AI concepts through internships.
-            </p>
-            <br />
-            <p>
-              I’m comfortable working in teams, presenting ideas, and managing my time across academics,
-              internships, and technical events. I’m currently seeking opportunities as a Software
-              Developer / Intern where I can contribute, learn, and grow.
-            </p>
-          </div>
-          <ul class="about-list">
-            <li>B.Tech CSE, RGM Engineering College (JNTUA)</li>
-            <li>Hands-on practice in Java, full stack, and Android apps</li>
-            <li>Virtual internships in AI-ML, Data Science, Java Full Stack, and Cybersecurity</li>
-            <li>Strong foundation in computer science core subjects</li>
-          </ul>
-        </div>
-      </section>
+  <h2 class="section-title">About Me</h2>
+  <p class="section-sub">
+    A quick snapshot of my background, what I’ve worked on, and where I’m heading.
+  </p>
+  <div class="about-grid">
+    <div>
+      <p>
+        I am a Computer Science and Engineering student from RGM Engineering College (JNTUA)
+        with a strong academic record (<strong>CGPA: 8.39</strong>) and a deep interest in software development,
+        problem solving, and cloud technologies. I like learning by doing – from building Android and web
+        applications to exploring data science and AI concepts through internships.
+      </p>
+      <br />
+      <p>
+        I have worked on <strong>5+ projects</strong> and completed <strong>8+ certifications</strong> across
+        Cloud, AI–ML, Cybersecurity, Java and Data Science. I actively practice
+        <strong>DSA using Java</strong> to strengthen my logic and problem-solving skills. I’m currently
+        seeking opportunities as a Software Developer / Intern where I can contribute, learn, and grow.
+      </p>
+    </div>
+    <ul class="about-list">
+      <li>B.Tech CSE, RGM Engineering College (JNTUA)</li>
+      <li>Hands-on practice in Java, full stack, and Android apps</li>
+      <li>Virtual internships in AI–ML, Data Science, Java Full Stack, and Cybersecurity</li>
+      <li>Strong foundation in computer science core subjects</li>
+    </ul>
+  </div>
+
+  <!-- Stats boxes (CGPA, projects, certifications, DSA using Java) -->
+  <div class="stats-container">
+    <div class="stat-box">
+      <div class="stat-value">8.39</div>
+      <div class="stat-label">CGPA</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-value">5+</div>
+      <div class="stat-label">Projects</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-value">8+</div>
+      <div class="stat-label">Certifications</div>
+    </div>
+
+    <div class="stat-box">
+      <div class="stat-value">DSA</div>
+      <div class="stat-label">using Java</div>
+    </div>
+  </div>
+</section>
 
       <!-- SKILLS -->
       <section id="skills" class="reveal">
