@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gowthami Manipati | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-accent: #0b1120;
+      --primary: #6366f1;
+      --primary-soft: rgba(99, 102, 241, 0.2);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --card-bg: rgba(15, 23, 42, 0.92);
+      --border-soft: rgba(148, 163, 184, 0.2);
+      --radius-xl: 18px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.9);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont;
+      background: radial-gradient(circle at top, #1d2356 0, #020617 40%, #020617 100%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 20px 18px 60px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 10px 4px 20px;
+    }
+
+    .logo {
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      font-size: 1.1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-mark {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: conic-gradient(from 180deg, #22c55e, #6366f1, #ec4899, #22c55e);
+      padding: 2px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: #020617;
+    }
+
+    nav {
+      display: flex;
+      gap: 14px;
+      font-size: 0.88rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      background: rgba(15, 23, 42, 0.7);
+      transition: 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--text);
+      border-color: rgba(129, 140, 248, 0.7);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    /* Common sections */
+    section {
+      margin-top: 10px;
+      padding: 18px;
+      border-radius: var(--radius-xl);
+      background: var(--card-bg);
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+      transition: 0.28s ease;
+    }
+
+    section:hover {
+      background: rgba(15, 23, 42, 0.98);
+      border-color: rgba(129, 140, 248, 0.8);
+      box-shadow: 0 18px 48px rgba(15, 23, 42, 0.95);
+      transform: translateY(-3px);
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .section-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 22px;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .hero-text { padding: 18px 12px 18px; }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid var(--border-soft);
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .tag-dot {
+      width: 8px; height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+      line-height: 1.25;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(120deg, #a855f7, #6366f1, #22c55e);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      border-radius: 999px;
+      border: 1px solid transparent;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      color: white;
+      box-shadow: 0 12px 30px rgba(79, 70, 229, 0.5);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(79, 70, 229, 0.7);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.95);
+      border-color: var(--border-soft);
+      color: var(--text);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--primary);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    /* Hero visual card */
+    .hero-visual { position: relative; min-height: 260px; }
+
+    .hero-card {
+      position: relative;
+      border-radius: 24px;
+      background: radial-gradient(circle at top, rgba(79, 70, 229, 0.16), transparent 60%),
+                  rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(129, 140, 248, 0.6);
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.95);
+      height: 100%;
+      padding: 18px 18px 20px;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+      transition: 0.28s ease;
+    }
+
+    .hero-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 22px 60px rgba(79, 70, 229, 0.65);
+    }
+
+    .avatar-wrapper {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid rgba(148, 163, 184, 0.7);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+      transform: translateY(0);
+      transition: 0.3s ease;
+      margin-bottom: 8px;
+    }
+
+    .hero-card:hover .avatar-wrapper {
+      transform: translateY(-4px);
+    }
+
+    .avatar-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .avatar-badge {
+      position: absolute;
+      right: 4px;
+      bottom: 10px;
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      padding: 4px 8px;
+      font-size: 0.7rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--muted);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+      font-size: 0.82rem;
+    }
+
+    .stat-card {
+      border-radius: 16px;
+      padding: 10px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid var(--border-soft);
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+
+    .stat-value {
+      font-weight: 500;
+      margin-top: 2px;
+      font-size: 0.95rem;
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      font-size: 0.78rem;
+    }
+
+    .chip {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(129, 140, 248, 0.6);
+      background: var(--primary-soft);
+      color: #c7d2fe;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
+      gap: 18px;
+      font-size: 0.9rem;
+    }
+
+    .about-grid p { color: var(--muted); }
+
+    .about-list {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .about-list li::before {
+      content: "• ";
+      color: var(--primary);
+    }
+
+    /* Skills */
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skills-tags span {
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid var(--border-soft);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .project-card {
+      border-radius: 18px;
+      padding: 12px 12px 14px;
+      background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.14), transparent 55%),
+                  rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      position: relative;
+      overflow: hidden;
+      transition: 0.24s ease;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(129, 140, 248, 0.18), transparent);
+      opacity: 0;
+      transition: 0.24s ease;
+    }
+
+    .project-card:hover::before { opacity: 1; }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(129, 140, 248, 0.9);
+      box-shadow: 0 18px 48px rgba(15, 23, 42, 0.95);
+    }
+
+    .project-title {
+      font-size: 0.98rem;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+
+    .project-tech {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .project-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .project-links {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      align-items: center;
+    }
+
+    .project-links a {
+      color: #a5b4fc;
+      text-decoration: none;
+    }
+
+    .project-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Certificates */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+    }
+
+    .cert-card {
+      border-radius: 14px;
+      padding: 10px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid var(--border-soft);
+      font-size: 0.82rem;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .cert-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .cert-org {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .cert-link {
+      margin-top: 4px;
+      font-size: 0.78rem;
+      align-self: flex-start;
+    }
+
+    /* Achievements */
+    .ach-list {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+    .ach-list li::before {
+      content: "★ ";
+      color: #facc15;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 18px;
+      font-size: 0.9rem;
+    }
+
+    .contact-item {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .contact-item span { color: var(--text); }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .socials a {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-soft);
+      background: rgba(15, 23, 42, 0.95);
+    }
+
+    .socials a:hover {
+      border-color: var(--primary);
+      color: var(--text);
+    }
+
+    footer {
+      margin-top: 22px;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* Simple reveal effect */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: 0.5s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-visual { order: -1; }
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">
+        <span class="logo-mark"><span class="logo-inner"></span></span>
+        <span>GOWTHAMI MANIPATI</span>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certs">Certificates</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero reveal">
+        <div class="hero-text">
+          <div class="tag">
+            <span class="tag-dot"></span>
+            Aspiring Software Engineer
+          </div>
+          <h1>
+            Hi, I'm <span>Gowthami</span><br />
+            CSE student who loves building smart, clean applications.
+          </h1>
+          <p class="hero-sub">
+            I’m a Computer Science student from RGM Engineering College with experience in Java,
+            full-stack development, Android apps, and data science internships. I enjoy solving
+            real-world problems through code and continuously improving my skills.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Projects</a>
+            <a href="#contact" class="btn btn-ghost">Contact Me</a>
+          </div>
+          <div class="hero-meta">
+            <span class="pill">B.Tech CSE • 2026</span>
+            <span class="pill">Java • DSA • Full Stack • Cloud</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="avatar-wrapper">
+              <!-- Keep your photo as profile.jpg in the same folder -->
+              <img src="profile.jpg" alt="Gowthami Manipati" class="avatar-image" />
+            </div>
+
+            <div class="stats">
+              <div class="stat-card">
+                <div class="stat-label">Major Project</div>
+                <div class="stat-value">Deep Audio Detection</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Internships</div>
+                <div class="stat-value">AI-ML • DS • Java FS • Cybersecurity</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Global Certification</div>
+                <div class="stat-value">AWS Cloud Practitioner</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Hackathons & Events</div>
+                <div class="stat-value">Smart India • SIGMOID</div>
+              </div>
+            </div>
+
+            <div class="hero-chips">
+              <span class="chip">Java</span>
+              <span class="chip">Data Structures & Algorithms</span>
+              <span class="chip">Java Full Stack</span>
+              <span class="chip">Android Development</span>
+              <span class="chip">Data Science</span>
+              <span class="chip">Soft Skills</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="reveal">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-sub">
+          A quick snapshot of who I am, what I’ve worked on, and what I’m aiming for.
+        </p>
+        <div class="about-grid">
+          <div>
+            <p>
+              I am a Computer Science and Engineering student from RGM Engineering College (JNTUA)
+              with a strong interest in software development, problem solving, and cloud technologies.
+              I like learning by doing – from building Android and web applications to exploring data
+              science and AI concepts through internships.
+            </p>
+            <br />
+            <p>
+              I’m comfortable working in teams, presenting ideas, and managing my time across academics,
+              internships, and technical events. I’m currently seeking opportunities as a Software
+              Developer / Intern where I can contribute, learn, and grow.
+            </p>
+          </div>
+          <ul class="about-list">
+            <li>B.Tech CSE, RGM Engineering College (JNTUA)</li>
+            <li>Hands-on practice in Java, full stack, and Android apps</li>
+            <li>Virtual internships in AI-ML, Data Science, Java Full Stack, and Cybersecurity</li>
+            <li>Strong foundation in computer science core subjects</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="reveal">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-sub">
+          Skills and tools that a CSE graduate like me is confident working with.
+        </p>
+        <div class="skills-tags">
+          <!-- Programming Languages -->
+          <span>C</span>
+          <span>C++</span>
+          <span>Java</span>
+          <span>Python (Basics)</span>
+
+          <!-- CS Core -->
+          <span>Data Structures & Algorithms</span>
+          <span>Object-Oriented Programming (OOPs)</span>
+          <span>DBMS</span>
+          <span>Operating Systems (Basics)</span>
+          <span>Computer Networks (Basics)</span>
+          <span>Software Engineering & SDLC</span>
+
+          <!-- Web & Full Stack -->
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript (Basics)</span>
+          <span>JAM Stack Concepts</span>
+          <span>MERN Stack (Basics)</span>
+          <span>Java Full Stack (Internship)</span>
+
+          <!-- Android & Apps -->
+          <span>Android App Development (Java)</span>
+          <span>Intents & Activities</span>
+          <span>Multimedia & Telephony APIs</span>
+          <span>Location & Wi-Fi APIs</span>
+          <span>Firebase (Basics)</span>
+
+          <!-- Databases & Tools -->
+          <span>MySQL</span>
+          <span>ANSI SQL</span>
+          <span>Git & GitHub</span>
+          <span>VS Code</span>
+          <span>Eclipse</span>
+          <span>Android Studio</span>
+
+          <!-- Cloud & Data -->
+          <span>AWS Cloud Fundamentals</span>
+          <span>AWS Cloud Practitioner</span>
+          <span>Data Science & ML Basics</span>
+
+          <!-- Soft Skills -->
+          <span>Problem Solving</span>
+          <span>Communication Skills</span>
+          <span>Presentation Skills</span>
+          <span>Team Collaboration</span>
+          <span>Time Management</span>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects" class="reveal">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">
+          A few key projects that reflect my learning and problem-solving approach.
+        </p>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-title">Deep Audio Detection – Fake Speech Identification</div>
+            <div class="project-tech">Machine Learning • Audio Processing • Python</div>
+            <p class="project-desc">
+              Major project that detects AI-generated (cloned) speech using hybrid features like
+              mel-spectrograms, CQCC, LFCC, and deep audio embeddings. Implemented ensemble models
+              (XGBoost, LightGBM, CNN, Autoencoders) to achieve robust fake speech detection.
+            </p>
+            <div class="project-links">
+              <span>Team Project</span>
+              <span>Final Year Major Project</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title">Student Result Management System</div>
+            <div class="project-tech">Java • MySQL • HTML • CSS</div>
+            <p class="project-desc">
+              Web-based application to manage student records and automate result generation.
+              Implemented CRUD operations, login authentication, and secure database connectivity
+              to help faculty easily manage academic data.
+            </p>
+            <div class="project-links">
+              <span>Solo/Team Project</span>
+              <span>Web Application</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title">Number Guessing Game</div>
+            <div class="project-tech">Core Java • Console Application</div>
+            <p class="project-desc">
+              Console-based mini game built using loops, conditional statements, and random number
+              generation in Java. Helped strengthen core programming logic and problem-solving skills.
+            </p>
+            <div class="project-links">
+              <span>Practice Project</span>
+              <span>Java</span>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-title">Smart Telephone Dialer App</div>
+            <div class="project-tech">Android • Java • Intents</div>
+            <p class="project-desc">
+              Android application that uses telephony and intent actions to make calls, view call logs,
+              and manage contacts. Implemented runtime permissions and optimized navigation for
+              a smooth user experience.
+            </p>
+            <div class="project-links">
+              <span>Android Mini Project</span>
+              <span>Mobile App</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATES -->
+      <section id="certs" class="reveal">
+        <h2 class="section-title">Certificates</h2>
+        <p class="section-sub">
+          Some of the certifications and virtual internships I’ve completed.
+        </p>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <div class="cert-title">AWS Certified Cloud Practitioner</div>
+            <div class="cert-org">Amazon Web Services</div>
+            <div>Global certification validating my understanding of AWS cloud fundamentals.</div>
+            <!-- Place your AWS Cloud certificate as AWSCloud.pdf or update this link -->
+            <a href="AWSCloud.pdf" target="_blank" class="btn btn-ghost cert-link">
+              View Certificate (PDF)
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-title">AI–ML Virtual Internship</div>
+            <div class="cert-org">APSCHE • EduSkills • AWS Academy</div>
+            <div>10-week virtual internship focusing on AI and Machine Learning concepts.</div>
+            <a href="aws-aiml.pdf" target="_blank" class="btn btn-ghost cert-link">
+              View Certificate (PDF)
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-title">Data Science Master Virtual Internship</div>
+            <div class="cert-org">AICTE • EduSkills • Altair</div>
+            <div>Intensive internship on data science workflows and ML applications.</div>
+            <a href="Data-Science-Master.pdf" target="_blank" class="btn btn-ghost cert-link">
+              View Certificate (PDF)
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-title">Java Full Stack Developer Virtual Internship</div>
+            <div class="cert-org">AICTE • EduSkills Academy</div>
+            <div>10-week internship covering Java-based full stack development.</div>
+            <a href="JavaFullStack.pdf" target="_blank" class="btn btn-ghost cert-link">
+              View Certificate (PDF)
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-title">Cybersecurity Virtual Internship</div>
+            <div class="cert-org">AICTE • EduSkills • Palo Alto Networks</div>
+            <div>Virtual internship focusing on cybersecurity fundamentals and threat concepts.</div>
+            <a href="CyberSecurity.pdf" target="_blank" class="btn btn-ghost cert-link">
+              View Certificate (PDF)
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-title">NPTEL – Soft Skills (Elite)</div>
+            <div class="cert-org">NPTEL • IIT Roorkee</div>
+            <div>12-week course on soft skills and professional communication.</div>
+            <a href="NPTEL-SoftSkill.pdf" target="_blank" class="btn btn-ghost cert-link">
+              View Certificate (PDF)
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-title">Generative AI – 5 Day Workshop</div>
+            <div class="cert-org">RGM College of Engineering & Technology</div>
+            <div>Workshop on Generative AI, conducted by Dept. of CSE with IEEE Computer Society.</div>
+            <a href="GEN-AI-Workshop.pdf" target="_blank" class="btn btn-ghost cert-link">
+              View Certificate (PDF)
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-title">Smart India Internal Hackathon 2023</div>
+            <div class="cert-org">RGM Engineering College</div>
+            <div>Participated with the team “Farmer’s World” in campus-level Smart India Hackathon.</div>
+            <a href="HACKTHON.pdf" target="_blank" class="btn btn-ghost cert-link">
+              View Certificate (PDF)
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-title">SIGMOID 2024 – CodeX</div>
+            <div class="cert-org">Sri Venkateswara University</div>
+            <div>National level participation in the CodeX coding event at SIGMOID-2024.</div>
+            <a href="Sigmoid-CodeX.pdf" target="_blank" class="btn btn-ghost cert-link">
+              View Certificate (PDF)
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <div class="cert-title">SIGMOID 2024 – Quiz Mania</div>
+            <div class="cert-org">Sri Venkateswara University</div>
+            <div>National level participation in Quiz Mania event at SIGMOID-2024.</div>
+            <a href="Sigmoid-QuizMania.pdf" target="_blank" class="btn btn-ghost cert-link">
+              View Certificate (PDF)
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ACHIEVEMENTS -->
+      <section id="achievements" class="reveal">
+        <h2 class="section-title">Achievements</h2>
+        <p class="section-sub">
+          Highlights of some achievements and recognitions.
+        </p>
+        <ul class="ach-list">
+          <li>
+            Secured <strong>3rd place</strong> in Paper Presentation during CS Engineers Day 2024 at
+            RGM Engineering College.
+          </li>
+          <li>
+            Successfully completed multiple virtual internships in AI–ML, Data Science, Java Full Stack,
+            and Cybersecurity.
+          </li>
+          <li>
+            Achieved <strong>AWS Certified Cloud Practitioner</strong> (Global Certification).
+          </li>
+          <li>
+            Participated in <strong>Smart India Internal Hackathon</strong> as part of the team "Farmer’s World".
+          </li>
+          <li>
+            Participated in national-level technical events <strong>CodeX</strong> and <strong>Quiz Mania</strong>
+            at SIGMOID-2024, Sri Venkateswara University.
+          </li>
+          <li>
+            Completed an NPTEL course on Soft Skills with Elite performance.
+          </li>
+        </ul>
+
+        <!-- Paper presentation PDF link as you asked -->
+        <a href="PaperPresentation.pdf" target="_blank" class="btn btn-primary" style="margin-top: 14px;">
+          View Paper Presentation Certificate (3rd Place)
+        </a>
+      </section>
+
+      <!-- RESUME -->
+      <section id="resume" class="reveal">
+        <h2 class="section-title">Resume</h2>
+        <p class="section-sub">
+          You can view or download my latest resume from here.
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+          <!-- Keep your resume as resume.pdf in the same folder -->
+          <a href="resume.pdf" class="btn btn-primary" download>
+            Download Resume (PDF)
+          </a>
+
+          <!-- Optional: add your Drive link later -->
+          <a href="#" target="_blank" class="btn btn-ghost">
+            View on Google Drive
+          </a>
+        </div>
+        <p style="margin-top:10px; font-size:0.8rem; color:var(--muted);">
+          *Ensure the file name is <strong>resume.pdf</strong> and it is in the same folder as this HTML file.
+        </p>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="reveal">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">
+          Interested in working together or just want to say hello? Feel free to reach out.
+        </p>
+        <div class="contact-grid">
+          <div>
+            <div class="contact-item">
+              Phone: <span>+91 79817 00508</span>
+            </div>
+            <div class="contact-item">
+              Email: <span>manipatigothami123@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              Location: <span>Nandyal, Andhra Pradesh, India</span>
+            </div>
+            <div class="socials">
+              <a href="https://github.com/ManipatiGowthami" target="_blank">GitHub</a>
+              <a href="https://www.linkedin.com/in/manipati-gowthami-545ba7344" target="_blank">LinkedIn</a>
+              <a href="mailto:manipatigothami123@gmail.com">Email Me</a>
+            </div>
+          </div>
+          <div>
+            <p style="color: var(--muted); font-size: 0.88rem;">
+              You can reach out to me for:
+            </p>
+            <ul class="about-list" style="margin-top: 6px;">
+              <li>Software Development internships or entry-level roles</li>
+              <li>Java, full stack, or Android development work</li>
+              <li>Collaborating on learning projects or academic work</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Gowthami Manipati. Built with ♥ and curiosity.
+    </footer>
+  </div>
+
+  <script>
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const reveals = document.querySelectorAll(".reveal");
+    const onScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      reveals.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < triggerBottom) {
+          el.classList.add("visible");
+        }
+      });
+    };
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+  </script>
+</body>
+</html>
